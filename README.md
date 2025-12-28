@@ -56,6 +56,21 @@ All datasets are included in the repository to ensure reproducibility.
 - **Return on investment:** **+68%**
 
 ---
+## Model Performance & Business Impact
+
+### Cumulative Gains — Campaign 7244
+The model captures a disproportionate share of donors in the top-ranked segments,
+clearly outperforming random targeting.
+![Cumulative Gains](outputs/figures/cumulative_gains_campaign_7244.png)
+
+### Profit Optimization
+The profit curve highlights the optimal contact strategy (~33% of donors),
+maximizing total campaign profit.
+![Profit Curve](outputs/figures/profit_curve_optimal_contact.png)
+
+### ROI Comparison
+Model-driven targeting consistently outperforms random selection across all contact fractions.
+![ROI Curve](outputs/figures/roi_curve_model_vs_random.png)
 
 ## Business Impact
 The results show that random targeting leads to systematic losses, while a model-driven
