@@ -70,6 +70,7 @@ By focusing on high-probability donors, the organization can:
 
 ## Repository Structure
 donor-reactivation-prediction/
+
 ├── data/ # Raw datasets (synthetic)
 ├── notebooks/ # Jupyter notebook with full analysis
 ├── outputs/ # Figures and model evaluation results
