@@ -1,66 +1,97 @@
-# Predicting Donor Reactivation for a Non-Profit Campaign
+# Donor Reactivation Prediction — Descriptive & Predictive Analytics
 
 ## Project Overview
-Non-profit organizations often rely on reactivation campaigns to re-engage inactive donors. 
-However, contacting all past donors is costly and inefficient.
+Non-profit organizations often rely on reactivation campaigns to re-engage inactive donors.
+However, contacting the entire donor base is costly and often leads to negative returns.
 
-The objective of this project is to predict which inactive donors are most likely to donate again, 
-allowing the organization to optimize campaign targeting and maximize return on investment.
+This project aims to **predict which inactive donors are most likely to donate €30 or more**
+and to demonstrate how predictive analytics can significantly improve campaign profitability
+compared to random targeting.
 
----
-
-## Business Objective
-- Identify inactive donors with a high probability of donating again
-- Improve campaign efficiency compared to random donor selection
-- Support marketing decisions using data-driven insights
+The project was developed as part of an academic group assignment in **Descriptive and Predictive Analytics**.
 
 ---
 
-## Data Description
-The project is based on multiple datasets provided by a non-profit organization, including:
+## Business Problem
+- High mailing costs (€0.80 per letter)
+- Low response rates when contacting all inactive donors
+- Need to optimize donor selection under budget constraints
+
+**Goal:**  
+Identify a subset of donors that maximizes profit while minimizing campaign costs.
+
+---
+
+## Data
+The analysis is based on **synthetic datasets provided for educational purposes**, simulating:
 - Donor demographic information
-- Historical donation records
-- Previous reactivation campaign selections
+- Historical donation behavior
+- Past reactivation campaigns
 - Campaign cost information
 
-To ensure a realistic modeling approach, only information available before each campaign was used, 
-preventing data leakage.
+All datasets are included in the repository to ensure reproducibility.
 
 ---
 
 ## Methodology
-1. Data cleaning and exploratory analysis  
-2. Target variable construction (donation amount ≥ €30)  
-3. Feature engineering using historical donation behavior  
+1. Data cleaning and exploration  
+2. Feature engineering from historical donation behavior  
+3. Feature selection to reduce dimensionality  
 4. Model training and comparison  
 5. Model evaluation using:
    - AUC
    - Lift curve
-   - Cumulative gains  
-6. Business impact analysis based on campaign costs
+   - Cumulative gains
+6. Business case simulation to identify the optimal contact strategy
 
 ---
 
-## Results
-- The predictive model outperformed random targeting strategies
-- High-potential donors could be identified within a limited subset of the population
-- The approach demonstrated clear potential to increase campaign profitability
+## Key Results
+- **Best model:** CatBoost  
+- **Validation performance:** AUC = **0.7017** on an independent campaign  
+- **Efficiency:** Top **30–40%** of donors captures ~**60–70%** of responders  
+- **Optimal strategy:** Contact ~**33%** of donors  
+- **Profit at optimum:** **€4,567**  
+- **Net uplift vs random targeting:** **+€6,467**  
+- **Return on investment:** **+68%**
+
+---
+
+## Business Impact
+The results show that random targeting leads to systematic losses, while a model-driven
+approach enables profitable and scalable fundraising campaigns.
+
+By focusing on high-probability donors, the organization can:
+- Reduce mailing costs
+- Increase expected revenue
+- Make data-driven campaign sizing decisions
+
+---
+
+## Repository Structure
+donor-reactivation-prediction/
+├── data/ # Raw datasets (synthetic)
+├── notebooks/ # Jupyter notebook with full analysis
+├── outputs/ # Figures and model evaluation results
+├── presentation/ # Final presentation slides
+└── README.md
+
 
 ---
 
 ## Tools & Technologies
-- Python (Pandas, NumPy, Scikit-learn)
+- Python (pandas, numpy, scikit-learn)
+- CatBoost
 - Jupyter Notebook
-- Data visualization libraries
-- Powerpoint for case presentation
+- Matplotlib / Seaborn
 
 ---
 
-## Team & Contribution
+## Author Contribution
 This project was developed as part of a group assignment.
 
-My personal contribution included:
+My personal contribution focused on:
 - Feature engineering
-- Model training and evaluation
-- Interpretation of model performance and business impact
-- Presentation slides regarding the business case
+- Model training and tuning
+- Model evaluation
+- Business case analysis and interpretation
