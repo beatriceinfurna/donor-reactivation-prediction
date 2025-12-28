@@ -69,7 +69,6 @@ By focusing on high-probability donors, the organization can:
 ---
 
 ## Repository Structure
-
 ```text
 donor-reactivation-prediction/
 ├── data/           # Raw datasets (synthetic)
@@ -77,8 +76,7 @@ donor-reactivation-prediction/
 ├── outputs/        # Figures and model evaluation results
 ├── presentation/   # Final presentation slides
 └── README.md
-
-
+```
 
 ---
 
